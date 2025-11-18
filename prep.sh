@@ -6,6 +6,41 @@ if [[ ! -z $(findmnt --mountpoint /mnt) ]]; then
   umount -R /mnt
 fi
 
+if [[ $(cryptsetup isLuks $DISKPROC) ]]; then 
+	cryptsetup luksOpen $DISKPROC proc
+else
+	cryptsetup luksFormat --sectore-size $DISKPROC &&
+	cryptsetup luksOpen $DISKPROC proc
+fi
+
+if [[ $(cryptsetup isLuks $DISKDATA) ]]; then 
+	cryptsetup luksOpen $DISKDATA proc
+else
+	cryptsetup luksFormat --sectore-size $DISKDATA &&
+	cryptsetup luksOpen $DISKPROC proc
+fi
+
+if [[ ! -e /dev/mapper/proc ]]; then
+	exit
+fi
+
+if [[ ! -e /dev/mapper/data ]]; then
+	exit
+fi
+
+if [[ -z $( vgs | grep proc ) ]]; then
+	pvcreate /dev/mapper/proc &&
+	vgcreate proc /dev/mapper/proc
+fi
+
+if [[ -z $( vgs | grep data ) ]]; then
+	pvcreate /dev/mapper/data &&
+	vgcreate data /dev/mapper/data
+fi
+
+
+
+
 PROCDISK=(root opts vars nets conf vlog vtmp vpac vaud temp docs)
 DATADISK=(home repo)
 
