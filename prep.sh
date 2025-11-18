@@ -60,7 +60,7 @@ mount /dev/proc/vaud /mnt/var/log/audit &&
 
 
 mkdir -p /mnt/home/family &&
-mount /dev/data/home /mnt/home/family &&
+mount /dev/data/repo /mnt/home/family &&
 
 pacstrap /mnt base &&
 
