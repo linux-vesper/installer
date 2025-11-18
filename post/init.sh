@@ -169,6 +169,9 @@ usermod -aG wheel net &&
 chown -R net:net /var/net &&
 passwd net
 
+## LUKSDISK
+echo "rd.luks.name=$(blkid -s UUID -o value /dev/nvme0n1p3)=root root=/dev/proc/root" > /etc/cmdline.d/01-boot.conf &&
+echo "data UUID=$(blkid -s UUID -o value /dev/nvme0n1p4) none" >> /etc/crypttab 
 
 ## NOTIF
 echo "
