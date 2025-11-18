@@ -11,9 +11,14 @@ timedatectl set-timezone Asia/Jakarta &&
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen  
 echo "en_US ISO-8859-1" >> /etc/locale.gen   
 
+LVMDRIVER=""
+
+if [[ -z $(vgs) ]]; then
+    $LVMDRIVER="lvm2"
+fi
+
 
 ## INSTALL
-
 
 pacman -Syy --noconfirm &&
 pacman -S wireless-regdb \
