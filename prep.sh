@@ -6,7 +6,6 @@ if [[ ! -z $(findmnt --mountpoint /mnt) ]]; then
   umount -R /mnt
 fi
 
-
 PROCDISK=(root opts vars nets conf vlog vtmp vpac vaud temp docs)
 DATADISK=(home repo)
 
@@ -21,7 +20,7 @@ do
 done
 
 
-mkfs.vfat -F32 -S 4096 -n BOOT /dev/nvme0n1p1 
+mkfs.vfat -F32 -S 4096 -n BOOT $DISKBOOT
 
 if [[ -e /dev/data/host ]];then
 	mkfs.btrfs -f /dev/data/host
@@ -37,7 +36,7 @@ mount /dev/proc/root /mnt &&
 
 mkdir -p /mnt/{boot,home,opt,var,tmp,srv/http} && 
 
-mount -o uid=0,gid=0,dmask=007,fmask=007 /dev/nvme0n1p1 /mnt/boot/ &&
+mount -o uid=0,gid=0,dmask=007,fmask=007 $DISKBOOT /mnt/boot/ &&
 mount /dev/proc/opts /mnt/opt &&
 mount /dev/proc/vars /mnt/var &&
 mount /dev/proc/temp /mnt/tmp &&
@@ -71,6 +70,5 @@ cp -fr $(pwd)/post /mnt &&
 
 echo "[multilib]" >> /mnt/etc/pacman.conf
 echo "Include = /etc/pacman.d/mirrorlist" >> /mnt/etc/pacman.conf
-
 
 arch-chroot /mnt /bin/bash /post/init.sh
