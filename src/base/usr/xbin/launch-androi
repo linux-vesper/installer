@@ -1,0 +1,2 @@
+#!/bin/bash
+weston --config=/usr/xbin/androi-config.ini -- waydroid show-full-ui

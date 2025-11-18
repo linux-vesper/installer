@@ -1,0 +1,5 @@
+[Desktop Entry]
+Name=Android
+Comment=Android emulator in a container
+Exec=/usr/xbin/launch-androi
+Type=Application
