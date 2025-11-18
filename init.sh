@@ -147,7 +147,7 @@ cd /
 ## SERVICE
 systemctl enable lightdm &&
 systemctl enable NetworkManager &&
-systemctl enable update.service &&
+systemctl enable update.timer &&
 systemctl enable systemd-timesyncd.service &&
 systemctl enable --global pipewire-pulse &&
 # systemctl enable waydroid-container.service
@@ -170,7 +170,7 @@ chmod +x /usr/pbin/* &&
 
 
 ## ADMIN ADD
-userad -d /var/net -u 23 net &&
+useradd -d /var/net -u 23 net &&
 usermod -aG wheel net &&
 chown -R net:net /var/net &&
 passwd net
