@@ -6,7 +6,7 @@ echo $DISKPROC;
 echo $DISKDATA;
 
 if [[ ! -z $(findmnt --mountpoint /mnt) ]]; then 
-  umount -R /mnt
+ 	umount -R /mnt
 fi
 
 if [[ ! -e /dev/mapper/proc ]]; then 
