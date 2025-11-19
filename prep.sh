@@ -2,6 +2,9 @@
 
 source /install/creamie/post/config
 
+echo $DISKPROC;
+echo $DISKDATA;
+
 if [[ ! -z $(findmnt --mountpoint /mnt) ]]; then 
   umount -R /mnt
 fi
