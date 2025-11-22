@@ -80,9 +80,9 @@ pacman -S linux-zen\
 
 
 if [[ $INTELPRO == true ]]; then
-    pacman -S intel-ucode 
+    pacman -S intel-ucode  --noconfirm
 else
-    pacman -S amd-ucode 
+    pacman -S amd-ucode  --noconfirm
 fi
 
 
