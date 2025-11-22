@@ -63,13 +63,6 @@ pacman -S linux-zen\
     aria2 --noconfirm &&
 
 
-curl -s 'https://liquorix.net/install-liquorix.sh' | sudo bash &&
-
-## CLEANS
-rm /usr/share/wayland-sessions/kodi-gbm.desktop &&
-rm /usr/share/xsessions/kodi.desktop &&
-
-
 ## CONFIG
 cp -fr /post/base/* / &&
 cp -fr /post/extra/amd/* / &&
