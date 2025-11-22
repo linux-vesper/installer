@@ -1,5 +1,5 @@
 [Unit]
-Description=Creamie auto system update
+Description=Eyerise auto system update
 
 [Service]
 Type=oneshot

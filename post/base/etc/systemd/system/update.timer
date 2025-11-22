@@ -1,5 +1,5 @@
 [Unit]
-Description=Creamie auto system update hourly
+Description=Eyerise auto system update hourly
 
 [Timer]
 OnCalendar=hourly

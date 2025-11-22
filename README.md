@@ -1,2 +1,2 @@
-# config-global
-general configuration for creamie os
+# Installation Script
+Installation scripts for eyerise os

@@ -28,7 +28,6 @@ mount -o uid=0,gid=0,dmask=007,fmask=007 $DISKBOOT /mnt/boot/ &&
 mkdir -p /mnt/home &&
 mount /dev/data /mnt/home &&
 
-
 pacstrap /mnt base &&
 
 genfstab -U /mnt > /mnt/etc/fstab &&

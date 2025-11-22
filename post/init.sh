@@ -22,7 +22,9 @@ ln -sf /opt/flat /var/lib/flatpak &&
 
 ## INSTALL
 pacman -Syy --noconfirm &&
-pacman -S wireless-regdb \
+pacman -S linux-zen\
+    
+    wireless-regdb \
     amd-ucode \
     mkinitcpio \
     base-devel \

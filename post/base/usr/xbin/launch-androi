@@ -1,2 +1,0 @@
-#!/bin/bash
-weston --config=/etc/waydroid/10-base.ini -- waydroid show-full-ui

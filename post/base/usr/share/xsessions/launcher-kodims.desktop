@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Exec=/usr/xbin/launch-kodim
-TryExec=/usr/xbin/launch-kodim
-Name=Media Server
-Keywords=session
-Comment=session
