@@ -115,7 +115,7 @@ systemctl enable waydroid-container.service
 ## BOOTUPS
 mkdir -p /boot/{efi,kernel,loader}
 mkdir -p /boot/efi/{boot,linux,systemd,rescue}
-mv /boot/vmlinuz-linux-zen /boot/amd-ucode.img /boot/kernel/
+mv /boot/vmlinuz-linux-zen /boot/*-ucode.img /boot/kernel/
 rm /etc/mkinitcpio.conf
 rm -fr /etc/mkinitcpio.conf.d/
 rm /boot/initramfs-*
@@ -124,13 +124,14 @@ bootctl --path=/boot/ install
 
 ## EXECUTE
 chmod +x /usr/xbin/* &&
-chmod +x /usr/pbin/* &&
-
+chmod +x /usr/lbin/* &&
+chmod +x /usr/rbin/* &&
 
 ## LUKSDISK
 echo "rd.luks.name=$(blkid -s UUID -o value $DISKPROC)=root root=/dev/proc/root" > /etc/cmdline.d/01-boot.conf &&
 echo "data UUID=$(blkid -s UUID -o value $DISKDATA) none" >> /etc/crypttab 
 mkinitcpio -P
+
 
 ## ADMIN ADD
 useradd -d /var/lib/telnet -u 23 net &&
@@ -139,10 +140,8 @@ chown -R net:net /var/lib/telnet &&
 passwd net
 
 mkinitcpio -P
+
 ## NOTIF
 echo "
-1. create user 
-2. config /etc/crypttab
-3. add complement userneed
-4. generate initramfs
+1. create user before logout and add user as administrator
 "

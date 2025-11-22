@@ -1,8 +1,8 @@
 DESKTOP=Desktop
 DOWNLOAD=Downloads
 TEMPLATES=Templates
-PUBLICSHARE=Games
-DOCUMENTS=Documents
+PUBLICSHARE=Public
+DOCUMENTS=Artwork
 MUSIC=Music
 PICTURES=Pictures
 VIDEOS=Videos
