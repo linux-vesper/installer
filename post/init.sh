@@ -19,41 +19,26 @@ locale-gen &&
 mkdir /opt/flat &&
 ln -sf /opt/flat /var/lib/flatpak &&
 
-
 ## INSTALL
 pacman -Syy --noconfirm &&
 pacman -S linux-zen\
-    
+    scx-scheds \
     wireless-regdb \
     amd-ucode \
     mkinitcpio \
     base-devel \
-    lvm2 \
     mesa \
-    kitty \
-    lib32-mesa \
-    vulkan-radeon \
-    lib32-vulkan-radeon \
+    konsole \
+    linux-firmware \
     sof-firmware \
-    linux-firmware-atheros \
-    linux-firmware-intel \
-    linux-firmware-other \
-    linux-firmware-realtek \
-    linux-firmware-amdgpu \
-    linux-firmware-radeon \
     openssh \
     firewalld \
     bluez-utils \
     dnsmasq \
     networkmanager \
-    weston \
     neovim \
     dolphin \
-    gamescope \
-    gamemode \
-    xorg-server \
     pipewire \
-    lib32-pipewire \
     pipewire-alsa \
     pipewire-jack \
     pipewire-pulse \
@@ -66,13 +51,8 @@ pacman -S linux-zen\
     flatpak \
     discover \
     fuse \
-    umu-launcher \
     btop \
-    lightdm \
-    lightdm-webkit2-greeter \
-    steam \
-    kodi-gles \
-    dolphin-emu \
+    sddm \
     firefox \
     kwallet \
     plasma-nm \
