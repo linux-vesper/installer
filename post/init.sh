@@ -105,6 +105,8 @@ systemctl enable --global pipewire-pulse &&
 systemctl enable systemd-timesyncd.service &&
 systemctl enable waydroid-container.service
 
+## enable waydroid
+waydroid init -s GAPPS
 
 ##
 ## BOOTUPS
