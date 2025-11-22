@@ -127,14 +127,6 @@ chmod +x /usr/rbin/* &&
 ## LUKSDISK
 echo "rd.luks.name=$(blkid -s UUID -o value $DISKPROC)=root root=/dev/mapper/root" > /etc/cmdline.d/01-boot.conf &&
 echo "data UUID=$(blkid -s UUID -o value $DISKDATA) none" >> /etc/crypttab 
-mkinitcpio -P
-
-
-## ADMIN ADD
-useradd -d /var/lib/telnet -u 23 net &&
-usermod -aG wheel net &&
-chown -R net:net /var/lib/telnet &&
-passwd net
 
 mkinitcpio -P
 
