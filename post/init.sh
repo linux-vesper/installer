@@ -42,7 +42,6 @@ pacman -S linux-zen\
     wireplumber \
     pipewire-alsa \
     pipewire-pulse \
-    pipewire-jack \
     ttf-droid \
     kitty-terminfo \
     bash-completion \
