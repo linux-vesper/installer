@@ -88,7 +88,6 @@ fi
 
 ## CONFIG
 cp -fr /post/base/* / &&
-cp -fr /post/extra/amd/* / &&
 
 
 ## LOCALE
