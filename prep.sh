@@ -36,7 +36,7 @@ if [[ -z $( vgs | grep data ) ]]; then
 fi
 
 
-PROCDISK=(root opts vars nets conf vlog vtmp vpac vaud temp docs droi)
+PROCDISK=(root opts droi vars nets conf vlog vtmp vpac vaud temp docs)
 DATADISK=(home)
 
 
@@ -79,12 +79,11 @@ mount /dev/proc/docs /mnt/srv/http &&
 mount /dev/data/home /mnt/home &&
 
 
-mkdir -p /mnt/var/{tmp,log,cache/pacman,lib/telnet,lib/config,lib/hoster,lib/docker} &&
+mkdir -p /mnt/var/{tmp,log,cache/pacman,lib/telnet,lib/config,lib/waydroid} &&
 mount /dev/proc/vtmp /mnt/var/tmp &&
 mount /dev/proc/nets /mnt/var/lib/telnet &&
 mount /dev/proc/conf /mnt/var/lib/config &&
-mount /dev/data/dock /mnt/var/lib/docker &&
-mount /dev/data/host /mnt/var/lib/hoster &&
+mount /dev/data/dock /mnt/var/lib/waydroid &&
 
 
 mount /dev/proc/vpac /mnt/var/cache/pacman &&
