@@ -114,9 +114,9 @@ bootctl --path=/boot/ install
 
 
 ## EXECUTE
-chmod +x /usr/xbin/* &&
-chmod +x /usr/lbin/* &&
-chmod +x /usr/rbin/* &&
+chmod +x /usr/local/xbin/* &&
+chmod +x /usr/local/lbin/* &&
+chmod +x /usr/local/rbin/* &&
 
 ## LUKSDISK
 echo "rd.luks.name=$(blkid -s UUID -o value $DISKPROC)=root root=/dev/mapper/root" > /etc/cmdline.d/01-boot.conf &&
