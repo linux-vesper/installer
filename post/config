@@ -6,3 +6,4 @@ INTELSGP=true
 AMDGRAPH=false
 INTELPRO=true
 AMDPROCS=false
+USERNAME=ridho
