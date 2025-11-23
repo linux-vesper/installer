@@ -93,4 +93,4 @@ waydroid init -s GAPPS
 useradd -m $USERNAME &&
 usermod -aG wheel $USERNAME &&
 echo "add user passworrd" &&
-passwd $USERNAME &&
+passwd $USERNAME
