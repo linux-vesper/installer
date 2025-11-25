@@ -25,7 +25,6 @@ systemctl enable sddm &&
 systemctl enable iwd &&
 systemctl enable sshd &&
 systemctl enable nginx &&
-systemctl enable docker &&
 systemctl enable dnsmasq &&
 systemctl enable firewalld &&
 systemctl enable update.timer &&
