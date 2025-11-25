@@ -1,92 +1,44 @@
-DISTRO_INSTALLATION_PACKAGE="linux-zen 
-    scx-scheds 
-    wireless-regdb 
-	iptables-nft 
+DISTRO_INSTALLATION_PACKAGE="wireless-regdb linux-lts
+    cosmic
+    cosmic-comp
+    cosmic-applets 
+    cosmic-app-library
+    cosmic-bg
+    cosmic-icon-theme    
+    cosmic-launcher
+    cosmic-notifications
+    power-profiles-daemon
+    gnome-keyring 
+    gvfs
+    gvfs-nfs 
+    gvfs-smb 
+    gvfs-dnssd
     mkinitcpio 
-	base 
     base-devel 
-    mesa  
-    linux-firmware 
+    mesa 
     sof-firmware 
+    linux-firmware
     openssh 
     firewalld 
     bluez-utils 
     dnsmasq 
     networkmanager 
-    neovim  
-    jack2 
+    weston 
+    neovim 
     pipewire 
-    wireplumber 
     pipewire-alsa 
+    pipewire-jack 
     pipewire-pulse 
     ttf-droid 
     kitty-terminfo 
     bash-completion 
     git 
     wget 
-	aria2 
     unzip 
     flatpak 
-	firefox 
+    discover 
     fuse 
     btop 
-    gdm
-    baobab
-    gnome-backgrounds
-    gnome-calculator
-    gnome-calendar
-    gnome-color-manager
-    gnome-console
-    gnome-disk-utility
-    gnome-font-viewer
-    gnome-keyring
-    gnome-logs
-    gnome-menus
-    gnome-session
-    gnome-settings-daemon
-    gnome-shell
-    gnome-software
-    gnome-system-monitor
-    grilo-plugins
-    gvfs
-    gvfs-afc
-    gvfs-dnssd
-    gvfs-goa
-    gvfs-google
-    gvfs-gphoto2
-    gvfs-mtp
-    gvfs-nfs
-    gvfs-onedrive
-    gvfs-smb
-    gvfs-wsdd
-    loupe
-    nautilus
-    papers
-    snapshot
-    sushi
-    xdg-desktop-portal-gnome
-    xdg-user-dirs-gtk
-    evolution
-    keepassxc 
-    waydroid
-    qtcreator
-    nginx
-    code
-    yad
-    gnome-builder
-    php
-    php-xsl
-    php-fpm
-    php-gd
-    php-intl
-    php-sqlite
-    ruby
-    rustup
-    nodejs-lts-iron
-    npm
-    composer
-    mariadb
-    docker
-    go
-    hugo
-    obsidian"
+    sddm
+    firefox 
+    aria2"
