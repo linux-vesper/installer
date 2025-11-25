@@ -34,9 +34,9 @@ mount /dev/mapper/data /mnt/home &&
 procieidven=$(grep "vendor_id" /proc/cpuinfo | head -n 1 | awk '{print $3}')
 
 if [[ "$procieidven" == "GenuineIntel" ]]; then
-    pastrap /mnt intel-ucode $DISTRO_INSTALLATION_PACKAGE 
+    pacstrap /mnt intel-ucode $DISTRO_INSTALLATION_PACKAGE 
 elif [[ "$procieidven" == "AuthenticAMD" ]]; then
-    pastrap /mnt amd-ucode $DISTRO_INSTALLATION_PACKAGE  
+    pacstrap /mnt amd-ucode $DISTRO_INSTALLATION_PACKAGE  
 fi
 
 
