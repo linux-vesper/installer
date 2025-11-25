@@ -31,6 +31,8 @@ export TERM=xterm-256color
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+# export laravel
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
 ## creamie bash themes
 function eyerise_bashthemes() {

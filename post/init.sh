@@ -47,8 +47,9 @@ fi
 
 
 ## SERVICE
-systemctl enable sddm &&
+systemctl enable gdm &&
 systemctl enable sshd &&
+systemctl enable nginx &&
 systemctl enable dnsmasq &&
 systemctl enable firewalld &&
 systemctl enable update.timer &&
@@ -56,6 +57,7 @@ systemctl enable NetworkManager &&
 systemctl enable --global pipewire-pulse &&
 systemctl enable systemd-timesyncd.service &&
 systemctl enable waydroid-container.service &&
+
 
 
 ## BOOTING
@@ -83,7 +85,8 @@ mkinitcpio -P &&
 ## WAYDROID
 waydroid init -s GAPPS &&
 
-
+## LARAVEL
+composer global require laravel/installer &&
 
 ## USERADD
 useradd -m $USERNAME &&
