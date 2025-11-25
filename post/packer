@@ -89,4 +89,7 @@ DISTRO_INSTALLATION_PACKAGE="linux-zen
     npm
     composer
     mariadb
-    docker"
+    docker
+    go
+    hugo
+    obsidian"
