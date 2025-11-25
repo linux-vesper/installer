@@ -12,12 +12,12 @@ PRESETS=('default')
 
 
 #default_config="/etc/mkinitcpio.conf"
-#default_image="/boot/eyerise.img"
-default_uki="/boot/efi/linux/eyerise.efi"
-#default_options="--splash /usr/share/systemd/bootctl/eyerise.bmp"
+#default_image="/boot/lunetta.img"
+default_uki="/boot/efi/linux/lunetta.efi"
+#default_options="--splash /usr/share/systemd/bootctl/lunetta.bmp"
 
 
 #fallback_config="/etc/mkinitcpio.conf"
-#fallback_image="/boot/eyerise-fallback.img"
-#fallback_uki="/boot/efi/linux/eyerise-fallback.efi"
+#fallback_image="/boot/lunetta-fallback.img"
+#fallback_uki="/boot/efi/linux/lunetta-fallback.efi"
 #fallback_options="-S autodetect"
