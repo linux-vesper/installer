@@ -88,4 +88,5 @@ DISTRO_INSTALLATION_PACKAGE="linux-zen
     nodejs-lts-iron
     npm
     composer
-    mariadb"
+    mariadb
+    docker"
