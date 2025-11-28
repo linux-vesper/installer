@@ -1,4 +1,4 @@
-# Installation Script Vesper OS
+# Installation 
 Installation scripts for Vesper OS
 
 ## System Information
