@@ -11,6 +11,7 @@ Installation scripts for Vesper OS
 
 ### core application
 1. merkuro      ( to do list )
+3. firefox
 2. kalk         ( calculator )
 3. okular       ( file viewer )  
 3. osidian      ( note taking app )
