@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [[ -z $1 ]]; then
-    echo "Error : vesper command need additional paramater"
+    echo "Error : Vesper command need additional paramater"
 fi
 
 
@@ -34,6 +34,3 @@ if [[ $1 == "--update" ]];then
     echo "push to gitrepo" && git push &&
     exit
 fi
-
-
-
